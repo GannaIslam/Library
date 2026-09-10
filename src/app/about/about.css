@@ -1,0 +1,467 @@
+/* =========================
+   GENERAL
+========================= */
+
+.about-hero,
+.spire-section,
+.archivists-section {
+  width: 100%;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.about-hero {
+  position: relative;
+
+  min-height: 440px;
+
+  background-color: #f7f6f5;
+
+  padding: 110px 5%;
+
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 850px;
+}
+
+.hero-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 28px;
+
+  color: #777;
+
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+}
+
+.gold-line {
+  display: inline-block;
+
+  width: 40px;
+  height: 2px;
+
+  background-color: #c59b45;
+}
+
+.hero-content h1 {
+  margin: 0;
+
+  color: #092239;
+
+  font-family: Georgia, serif;
+
+  font-size: 42px;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.hero-side-text {
+  position: absolute;
+
+  right: 45px;
+  top: 120px;
+
+  color: #777;
+
+  font-size: 10px;
+  letter-spacing: 1px;
+
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+
+/* =========================
+   SPIRE SECTION
+========================= */
+
+.spire-section {
+  background-color: white;
+
+  padding: 85px 0;
+}
+
+.spire-image-wrapper {
+  position: relative;
+
+  padding: 12px;
+
+  max-width: 590px;
+}
+
+.spire-image-wrapper::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 92%;
+  height: 92%;
+
+  background-color: #dedddd;
+
+  z-index: 0;
+}
+
+.spire-image {
+  position: relative;
+
+  z-index: 1;
+
+  display: block;
+
+  width: 100%;
+  height: 560px;
+
+  object-fit: cover;
+
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.established-stamp {
+  position: absolute;
+
+  z-index: 2;
+
+  left: -15px;
+  bottom: 0;
+
+  width: 95px;
+  height: 95px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background-color: #fff;
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  color: #c59b45;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  transform: rotate(-8deg);
+}
+
+
+.spire-content {
+  padding-left: 45px;
+
+  color: #555;
+}
+
+.spire-content h2 {
+  margin-bottom: 28px;
+
+  color: #102236;
+
+  font-family: Georgia, serif;
+
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.spire-content p {
+  margin-bottom: 25px;
+
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.spire-content .intro-text::first-letter {
+  float: left;
+
+  margin-right: 7px;
+
+  color: #102236;
+
+  font-family: Georgia, serif;
+
+  font-size: 48px;
+  line-height: 0.8;
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+  display: flex;
+
+  margin-top: 35px;
+}
+
+.quote-line {
+  flex-shrink: 0;
+
+  width: 2px;
+
+  background-color: #c59b45;
+}
+
+.quote-content {
+  padding-left: 22px;
+}
+
+.quote-content p {
+  margin: 0 0 15px;
+
+  color: #1b2632;
+
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+.quote-content span {
+  color: #777;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   ARCHIVISTS
+========================= */
+
+.archivists-section {
+  background-color: #fbf9f8;
+
+  padding: 100px 0 90px;
+}
+
+.archivists-heading {
+  max-width: 700px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.heading-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+
+  color: #c59b45;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+.archivists-heading h2 {
+  margin-bottom: 20px;
+
+  color: #092239;
+
+  font-family: Georgia, serif;
+
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.archivists-heading p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.archivists-row {
+  row-gap: 30px;
+}
+
+.archivist-card {
+  min-height: 360px;
+
+  padding: 25px 25px 35px;
+
+  background-color: #f8f8f8;
+
+  text-align: center;
+}
+
+.archivist-image {
+  display: block;
+
+  width: 205px;
+  height: 190px;
+
+  margin: 0 auto 30px;
+
+  object-fit: cover;
+
+  border-radius: 7px;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.archivist-card h3 {
+  margin-bottom: 10px;
+
+  color: #102236;
+
+  font-family: Georgia, serif;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.archivist-card span {
+  color: #c59b45;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 991px) {
+
+  .about-hero {
+    min-height: 380px;
+
+    padding: 90px 6%;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .spire-section {
+    padding: 65px 0;
+  }
+
+  .spire-content {
+    padding-left: 0;
+
+    padding-top: 50px;
+  }
+
+  .spire-image {
+    height: 500px;
+  }
+
+  .archivists-section {
+    padding: 75px 0;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+  .about-hero {
+    min-height: 330px;
+
+    padding: 75px 25px;
+  }
+
+  .hero-content h1 {
+    font-size: 29px;
+  }
+
+  .hero-side-text {
+    display: none;
+  }
+
+  .spire-section {
+    padding: 50px 0;
+  }
+
+  .spire-image-wrapper {
+    max-width: 100%;
+  }
+
+  .spire-image {
+    height: 420px;
+  }
+
+  .spire-content {
+    padding-top: 45px;
+  }
+
+  .spire-content h2 {
+    font-size: 27px;
+  }
+
+  .spire-content p {
+    font-size: 16px;
+  }
+
+  .quote-content p {
+    font-size: 18px;
+  }
+
+  .archivists-section {
+    padding: 65px 0;
+  }
+
+  .archivists-heading {
+    margin-bottom: 45px;
+  }
+
+  .archivists-heading h2 {
+    font-size: 29px;
+  }
+
+  .archivists-heading p {
+    padding: 0 20px;
+  }
+
+  .archivist-card {
+    max-width: 400px;
+
+    margin: 0 auto;
+  }
+
+}

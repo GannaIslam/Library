@@ -1,0 +1,96 @@
+:host {
+  display: block;
+}
+
+.book-card {
+  min-width: 0;
+}
+
+.book-cover {
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 4px;
+  color: #faf8f3;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 2px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cover-one {
+  background: #26364a;
+}
+
+.cover-two {
+  background: #5b5144;
+}
+
+.cover-three {
+  background: #323b35;
+}
+
+.cover-four {
+  background: #4a3030;
+}
+
+.book-info {
+  padding-top: 16px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.tags span {
+  padding: 4px 12px;
+  border: 1px solid #d8d2c4;
+  border-radius: 20px;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #5c5f66;
+}
+
+.book-info h3 {
+  margin: 0 0 6px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #14192b;
+}
+
+.author {
+  margin: 0;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #5c5f66;
+}
+
+.reading-time {
+  margin: 10px 0 0;
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #8a8d93;
+}

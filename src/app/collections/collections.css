@@ -1,0 +1,350 @@
+.library-page {
+  min-height: 100vh;
+  background: white;
+  color: #f2eee7;
+
+  padding: 60px;
+  box-sizing: border-box;
+
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 40px;
+
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+.header-content {
+  max-width: 760px;
+}
+
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 18px;
+
+  color: black;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+.header-content h1 {
+  margin: 0 0 18px;
+
+  color: #12314a;
+
+  font-size: 48px;
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+
+.header-content p {
+  margin: 0;
+
+  color: #12314a;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+.divider {
+  max-width: 1400px;
+
+  height: 1px;
+
+  margin: 35px auto 60px;
+
+  background: #555;
+}
+
+.collections-grid {
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.7fr 1fr;
+
+  grid-template-rows: 390px 390px;
+
+  gap: 18px;
+}
+
+.collection-card {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  border-radius: 18px;
+
+  min-width: 0;
+
+  isolation: isolate;
+}
+
+
+.collection-card img {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: -2;
+
+  transition: transform 0.6s ease;
+}
+
+
+.collection-card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.card-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.55) 45%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
+
+  z-index: -1;
+}
+
+.card-content {
+  position: absolute;
+
+  left: 34px;
+  right: 34px;
+  bottom: 30px;
+}
+
+
+.card-label {
+  display: inline-block;
+
+  margin-bottom: 12px;
+
+  color: #d4d0c9;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+.card-label.gold {
+  color: #d4aa61;
+}
+
+
+.card-content h2 {
+  margin: 0 0 10px;
+
+  color: #f6f2ec;
+
+  font-size: 28px;
+  font-weight: 400;
+
+  line-height: 1.1;
+}
+
+
+.card-content p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #d0d0d0;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+/* First card */
+.rare-vault {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+
+/* Second card */
+.forgotten-lore {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+
+/* Third card */
+.modern-manuscripts {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+
+/* Fourth card */
+.children-fables {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.arrow-button {
+  position: absolute;
+
+  right: 28px;
+  bottom: 28px;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 13px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  background: rgba(80, 90, 100, 0.65);
+
+  color: white;
+
+  font-size: 25px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.arrow-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+
+  transform: translateX(4px);
+}
+
+
+.sparkle {
+  position: absolute;
+
+  right: 28px;
+  top: 28px;
+
+  color: #f5dfb0;
+
+  font-size: 28px;
+}
+
+@media (max-width: 900px) {
+
+  .library-page {
+    padding: 35px 25px;
+  }
+
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  .header-content h1 {
+    font-size: 40px;
+  }
+
+
+  .filter-button {
+    align-self: flex-start;
+  }
+
+
+  .collections-grid {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: auto;
+  }
+
+
+  .rare-vault,
+  .forgotten-lore,
+  .modern-manuscripts,
+  .children-fables {
+    grid-column: auto;
+    grid-row: auto;
+
+    min-height: 350px;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .library-page {
+    padding: 30px 16px;
+  }
+
+
+  .header-content h1 {
+    font-size: 34px;
+  }
+
+
+  .header-content p {
+    font-size: 15px;
+  }
+
+
+  .card-content {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+
+
+  .card-content h2 {
+    font-size: 24px;
+  }
+
+
+  .card-content p {
+    font-size: 14px;
+  }
+
+}

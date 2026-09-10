@@ -1,0 +1,114 @@
+<section class="filter-section">
+
+  <div class="filter-group">
+
+    <label for="genre">
+      GENRE
+    </label>
+
+    <select
+      id="genre"
+      [value]="genre"
+      (change)="genre = $any($event.target).value">
+
+      <option value="">
+        All Genres
+      </option>
+
+      <option value="history">
+        History
+      </option>
+
+      <option value="fantasy">
+        Fantasy
+      </option>
+
+      <option value="epic">
+        Epic
+      </option>
+
+      <option value="mystery">
+        Mystery
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div class="filter-group">
+
+    <label for="mood">
+      MOOD
+    </label>
+
+    <select
+      id="mood"
+      [value]="mood"
+      (change)="mood = $any($event.target).value">
+
+      <option value="">
+        Any Mood
+      </option>
+
+      <option value="adventure">
+        Adventurous
+      </option>
+
+      <option value="calm">
+        Calm
+      </option>
+
+      <option value="dark">
+        Dark
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div class="filter-group">
+
+    <label for="reading-time">
+      READING TIME
+    </label>
+
+    <select
+      id="reading-time"
+      [value]="readingTime"
+      (change)="readingTime = $any($event.target).value">
+
+      <option value="">
+        Any Duration
+      </option>
+
+      <option value="short">
+        Under 5 Hours
+      </option>
+
+      <option value="medium">
+        5 - 10 Hours
+      </option>
+
+      <option value="long">
+        10+ Hours
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <button
+    class="search-btn"
+    type="button"
+    aria-label="Search books"
+    title="Search"
+    (click)="onSearch()">
+
+    ⌕
+
+  </button>
+
+</section>

@@ -1,0 +1,140 @@
+<section class="book-details">
+
+    <!-- LEFT SIDE -->
+
+    <div class="book-left">
+
+        <div class="book-image-box">
+
+            <img [src]="bookImage" [alt]="title">
+
+        </div>
+
+        <button type="button" class="request-btn" (click)="RequestFromStacks()">
+            Request from the Stacks
+        </button>
+
+        <button class="save-btn">
+            + Save to Reading List
+        </button>
+
+        <div class="book-status">
+
+            <span class="status-icon">✓</span>
+
+            <div>
+
+                <small>CURRENT STATUS</small>
+
+                @if (isAvailable) {
+
+                <p>
+                    {{ status }}
+                </p>
+
+                }
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- RIGHT SIDE -->
+
+    <div class="book-info">
+
+        <!-- Tags -->
+
+        <div class="tags">
+
+            @for (tag of tags; track tag) {
+
+            <span>
+                {{ tag }}
+            </span>
+
+            }
+
+        </div>
+
+
+        <!-- Title -->
+
+        <h1>
+            {{ title }}
+        </h1>
+
+
+        <!-- Author -->
+
+        <div class="author">
+
+            <i>by</i>
+
+            <a [routerLink]="['author']">
+                {{ author }}
+            </a>
+
+        </div>
+
+
+        <!-- Book Information -->
+
+        <div class="book-meta">
+
+            @for (info of bookInfo; track info.title) {
+
+            <div>
+
+                <small>
+                    {{ info.title }}
+                </small>
+
+                <p>
+                    {{ info.value }}
+                </p>
+
+            </div>
+
+            }
+
+        </div>
+
+
+        <!-- Description -->
+
+        <div class="description">
+
+            <p>
+                {{ description.first }}
+            </p>
+            <p>
+                {{description.second}}
+            </p>
+
+        </div>
+
+
+        <!-- Curator Note -->
+
+        <div class="curator-note">
+
+            <h3>
+                ✧ The Curator's Note
+            </h3>
+
+            <p>
+                {{curatorNote}}
+            </p>
+
+            <div class="archivist">
+                MASTER ARCHIVIST THORNE
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

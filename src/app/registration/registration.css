@@ -1,0 +1,38 @@
+* { box-sizing: border-box; font-family: Georgia, serif; }
+
+:host { display: block; background: #f2ece3; min-height: 100vh; padding: 40px 0; }
+.page { width: 500px; margin: auto; text-align: center; }
+.logo { color: #a97b3d; font-size: 11px; letter-spacing: 1px; margin-bottom: 10px; }
+.header h1 { font-size: 28px; margin: 0 0 10px; }
+.header p { font-size: 13px; color: #555; line-height: 1.5; }
+
+.card { background: #fff; border-top: 3px solid #a97b3d; padding: 30px; text-align: left; margin-top: 20px; }
+label { display: block; font-size: 11px; font-weight: bold; margin: 15px 0 5px; }
+label span { float: right; color: #a97b3d; font-weight: normal; }
+
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%; padding: 10px; border: 1px solid #ddd; font-size: 13px;
+}
+
+.row { display: flex; gap: 15px; }
+.row > div { flex: 1; }
+.hint { font-size: 11px; color: #888; margin: 5px 0; }
+
+.options, .sso { display: flex; gap: 10px; }
+.options button, .sso button {
+  flex: 1; padding: 10px; border: 1px solid #ddd; background: #fff; cursor: pointer; font-size: 12px;
+}
+.options .active { background: #f2ece3; border-color: #a97b3d; }
+
+.checkbox { font-size: 12px; margin-top: 12px; display: flex; gap: 8px; align-items: flex-start; }
+
+.submit-btn {
+  width: 100%; background: #1a1a2e; color: #fff; border: none;
+  padding: 14px; margin-top: 20px; font-size: 14px; cursor: pointer;
+}
+
+.divider { text-align: center; font-size: 10px; color: #999; margin: 20px 0; }
+.footer { font-size: 12px; color: #666; margin-top: 20px; }
+.footer.small { font-size: 10px; color: #aaa; margin-top: 5px; }
+.error-msg { color: #b3261e; font-size: 11px; margin: 5px 0; }
+.submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }

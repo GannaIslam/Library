@@ -1,0 +1,11 @@
+@if (router.url !== '/login' && router.url !== '/registration') {
+  <app-navbar></app-navbar>
+}
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+@if (router.url !== '/login' && router.url !== '/registration') {
+  <app-footer></app-footer>
+}

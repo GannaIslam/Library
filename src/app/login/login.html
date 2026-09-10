@@ -1,0 +1,44 @@
+<div class="modal">
+  <div class="modal-image">
+    <img src="image.jpg" alt="library" />
+    <div class="image-text">
+      <h2>The Scriptorium</h2>
+      <p>
+        Curating the world's most vital manuscripts, digital archives, and quiet spaces for deep
+        thought.
+      </p>
+    </div>
+  </div>
+
+  <div class="modal-form">
+    <div class="form-header">
+      <h1>Access the Archives</h1>
+      <p class="subtitle">Please present your credentials to enter the reading rooms.</p>
+    </div>
+
+    <div class="field">
+      <label>SCHOLAR IDENTIFIER (EMAIL)</label>
+      <input type="email" [(ngModel)]="email" name="email" />
+    </div>
+
+    <div class="field">
+      <label>PASSPHRASE</label>
+      <input type="password" [(ngModel)]="password" name="password" />
+    </div>
+
+    @if (errorMessage) {
+      <p class="error-msg">{{ errorMessage }}</p>
+    }
+
+    <button class="enter-btn" (click)="enterVault()">Enter the Vault</button>
+
+    <div class="register-text">
+      <span>Don't have an account?</span>
+      <a routerLink="/registration">Register</a>
+    </div>
+    <div class="quote-box">
+      <p>"A library is not a luxury but one of the necessities of life."</p>
+      <span>— THE CURATOR</span>
+    </div>
+  </div>
+</div>

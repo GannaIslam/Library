@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="payment-component.css">
+<div class="container">
+    <h2>Secure Payment</h2>
+    <p>Complete your acquisition seamlessly with encrypted checkout.</p>
+<div class="checkout-layout">
+<div class="card">
+    <div class="card-title">
+        <div class="FIRST">
+     <h2>Payment Details</h2>
+    </div>
+    <div class="SECOND">
+<input class="form-control" type="text" placeholder="CARDS ACCEPTED" aria-label="Disabled input example" disabled>
+    </div>
+    </div>
+
+    <div class="my-form">
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Name On The Card</label>
+  <input type="text" [(ngModel)]="cardHolder" name="cardHolder" placeholder="Lady Elenor Vance" required>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Card Number</label>
+  <input type="number" [(ngModel)]="cardNumber" name="cardNumber" placeholder="1234 5678 9123 4567" required>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Expiration Date (MM / YY)</label>
+  <input type="text" [(ngModel)]="expiryDate" name="expiryDate" placeholder="12/28" required>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Security Number (CVV)</label>
+  <input type="number" [(ngModel)]="cvv" name="cvv" placeholder="894" required>
+</div>
+<div>
+      <input type="checkbox" id="saveCard" [(ngModel)]="saveCard" name="saveCard" />
+      <label for="saveCard">Save payment securely for future checkouts</label>
+    </div>
+</div>
+
+<p>🔒 All transactions are encrypted and secured with end-to-end industry standards</p>
+</div>
+
+<div class="card-summery">
+    <div class="ledger-summary">
+  <h2>Order Summary</h2>
+  
+  @for (book of books; track book.id){
+ <div class="summary-row">
+    <span>{{book.title}}</span>
+    <p style="text-align: center;">QTY {{book.quantity}}</p>
+    <span>{{book.price*book.quantity}} SOL</span>
+  </div>
+}
+  </div>
+  
+<div class="history">
+ <div class="summary-row">
+    <span>Subtotal ({{books.length}} items)</span>
+    <span>{{getSubtotal()}} SOL</span>
+  </div>
+ <div class="summary-row">
+    <span>Archival Fee</span>
+    <span>45 SOL</span>
+  </div>
+ <div class="summary-row">
+    <span>Guild Insurance</span>
+    <span>15 SOL</span>
+  </div>
+</div>
+ 
+  <div class="summary-row total-row">
+    <span class="badge text-bg-secondary">Total</span>
+    <span class="badge text-bg-secondary" style="color: #b9995d;text-decoration: solid;">{{getTotal()}} SQL</span>
+  </div>
+
+
+
+<div class="checkout-actions">
+<button type="button" class="pay-btn">
+Pay {{getTotal()}} SOL <span class="arrow">&rarr;</span>
+</button>
+<button type="button" class="transparent-btn" (click)="ReturnToCart()">
+Return to cart
+</button>
+</div>
+</div>
+</div>
+</div>
+ 

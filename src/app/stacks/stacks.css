@@ -1,0 +1,257 @@
+.stacks-page {
+  min-height: 100vh;
+  padding: 0 48px 80px;
+
+  background: #faf8f3;
+  color: #14192b;
+}
+
+.hero {
+  max-width: 750px;
+
+  margin: 0 auto;
+
+  padding: 80px 0 60px;
+
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  color: #8a8d93;
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 6vw, 64px);
+  font-weight: 600;
+  line-height: 1.1;
+
+  color: #14192b;
+}
+
+.hero-description {
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+
+  color: #5c5f66;
+}
+
+.books-section {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: end;
+
+  margin-bottom: 32px;
+}
+
+.section-header .eyebrow {
+  margin-bottom: 8px;
+}
+
+.section-header h2 {
+  margin: 0;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+
+  color: #14192b;
+}
+
+.sort {
+  margin: 0;
+
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 1.5px;
+
+  color: #8a8d93;
+}
+
+.sort strong {
+  color: #14192b;
+}
+
+.sort-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-control label {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #8a8d93;
+}
+
+.sort-control select {
+  border: none;
+
+  background: transparent;
+
+  color: #14192b;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.books-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 32px;
+}
+
+.no-results {
+  padding: 70px 20px;
+
+  text-align: center;
+
+  border-top: 1px solid #e8e6df;
+  border-bottom: 1px solid #e8e6df;
+}
+
+.no-results h3 {
+  margin: 0 0 10px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+
+  color: #14192b;
+}
+
+.no-results p {
+  margin: 0;
+
+  font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+
+  color: #5c5f66;
+}
+
+.load-more-container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 48px;
+}
+
+.load-more-btn {
+  min-width: 190px;
+  height: 48px;
+
+  padding: 0 24px;
+
+  border: none;
+  border-radius: 4px;
+
+  background: #161b2e;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.load-more-btn:hover {
+  opacity: 0.9;
+}
+
+.load-more-btn:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 1000px) {
+
+  .books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .sort-control {
+    align-self: flex-start;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .stacks-page {
+    padding: 0 20px 60px;
+  }
+
+  .hero {
+    padding: 60px 0 45px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}

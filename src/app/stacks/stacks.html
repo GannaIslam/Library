@@ -1,0 +1,133 @@
+<section class="stacks-page">
+
+  <section class="hero">
+
+    <p class="eyebrow">
+      CATALOG
+    </p>
+
+    <h1>
+      The Stacks
+    </h1>
+
+    <p class="hero-description">
+      Explore a curated collection of timeless stories, legendary journeys,
+      and forgotten worlds waiting to be discovered.
+    </p>
+
+  </section>
+
+
+  <app-filter-bar
+    (search)="onSearch($event)">
+  </app-filter-bar>
+
+
+  <section class="books-section">
+
+    <div class="section-header">
+
+      <div>
+
+        <p class="eyebrow">
+          DISPLAYING
+        </p>
+
+        <h2>
+          Curated Selections
+        </h2>
+
+      </div>
+
+
+      <div class="sort-control">
+
+        <label for="sort">
+          SORT BY:
+        </label>
+
+        <select
+          id="sort"
+          [value]="sortOption"
+          (change)="onSort($event)">
+
+          <option value="recent">
+            RECENT
+          </option>
+
+          <option value="shortest">
+            SHORTEST
+          </option>
+
+          <option value="longest">
+            LONGEST
+          </option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+
+    @if (filteredBooks.length > 0) {
+
+      <div class="books-grid">
+
+        @for (book of filteredBooks; track book.id) {
+
+          <app-book-card
+            [id]="book.id"
+            [title]="book.title"
+            [author]="book.author"
+            [readingTime]="book.readingTime"
+            [tags]="book.tags"
+            [coverLines]="book.coverLines"
+            [coverClass]="book.coverClass"
+            [bookImage]="book.bookImage">
+          </app-book-card>
+
+        }
+
+      </div>
+
+
+      @if (canLoadMore) {
+
+        <div class="load-more-container">
+
+          <button
+            class="load-more-btn"
+            type="button"
+            (click)="loadMore()">
+
+            LOAD MORE TOMES
+
+          </button>
+
+        </div>
+
+      }
+
+    } @else {
+
+      <div class="no-results">
+
+        <h3>
+          No tomes found
+        </h3>
+
+        <p>
+          Try changing your filters to discover another story.
+        </p>
+
+      </div>
+
+    }
+
+  </section>
+
+
+  <router-outlet></router-outlet>
+
+</section>

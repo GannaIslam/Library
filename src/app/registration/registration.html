@@ -1,0 +1,60 @@
+
+
+  <div class="page">
+
+    <div class="header">
+      <div class="logo">📖 AETHELGARD BIBLIOTHECA ANTIQUA</div>
+      <h1>Scholar Enrollment</h1>
+      <p>Induction into the Guild grants quiet privileges: rare manuscript archives, private reading cells, and seasonal acquisitions.</p>
+    </div>
+
+    <div class="card">
+
+      <label>FULL LEGAL NAME / SCHOLAR DESIGNATION</label>
+      <input type="text" placeholder="e.g. Genevieve Vance" [(ngModel)]="fullName" name="fullName">
+
+      <label>ELECTRONIC DISPATCH (EMAIL) <span>Institutional or Personal</span></label>
+      <input type="email" placeholder="scholar@aethelgard.org" [(ngModel)]="email" name="email">
+
+      <div class="row">
+        <div>
+          <label>MASTER KEY / PASSWORD</label>
+          <input type="password" [(ngModel)]="password" name="password">
+        </div>
+        <div>
+          <label>CONFIRM KEY</label>
+          <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword">
+        </div>
+      </div>
+      <p class="hint">Minimum 8 characters, including at least one numeral or cipher.</p>
+      @if (confirmPassword && !passwordsMatch) {
+        <p class="error-msg">Passwords do not match.</p>
+      }
+
+      <label>PRIMARY AREA OF SCHOLAR FOCUS</label>
+      <div class="options">
+        @for (area of focusAreas; track area.id) {
+          <button [class.active]="selectedFocus === area.id" (click)="selectFocus(area.id)">{{ area.label }}</button>
+        }
+      </div>
+
+      <div class="checkbox"><input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms"> I solemnly agree to the <a href="#">Library Charter</a> and <a href="#">Privacy Terms of Study</a>.</div>
+      <div class="checkbox"><input type="checkbox" [(ngModel)]="sendNotices" name="sendNotices"> Send seasonal reading dispatches and private acquisition notices via electronic mail.</div>
+
+      <button class="submit-btn" [disabled]="!agreeTerms" (click)="completeEnrollment()">Complete Enrollment →</button>
+
+      <div class="divider">OR AUTHENTICATE WITH</div>
+
+      <div class="sso">
+        <button>🏛 University SSO</button>
+        <button>G Google Scholar</button>
+      </div>
+
+    </div>
+
+    <p class="footer">Already hold an inscribed reader's card? <a routerLink="/login">Sign in to The Scriptorium</a></p>
+    <p class="footer small">AETHELGARD BIBLIOTHECA ANTIQUA · EST. 1422 · UPPER WARD, SCRIPTORIUM DISTRICT</p>
+
+  </div>
+
+

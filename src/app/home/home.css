@@ -1,0 +1,767 @@
+/* =========================================================
+   GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f2ed;
+    color: #071522;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.hero {
+    min-height: 620px;
+
+    background: #071522;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 9%;
+
+    gap: 60px;
+}
+
+
+/* ---------- HERO CONTENT ---------- */
+
+.hero-content {
+    max-width: 560px;
+}
+
+.small-title {
+    color: #b98938;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 {
+    color: #f4f2ed;
+
+    font-family: Georgia, serif;
+
+    font-size: 60px;
+    font-weight: normal;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+
+.hero p {
+    color: #c8c8c8;
+
+    font-size: 16px;
+    line-height: 1.8;
+
+    max-width: 500px;
+
+    margin-bottom: 35px;
+}
+
+
+/* ---------- HERO BUTTONS ---------- */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.hero-buttons a {
+    display: inline-block;
+}
+
+
+.primary-btn,
+.secondary-btn {
+    padding: 14px 24px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.primary-btn {
+    background: #b98938;
+
+    color: #071522;
+
+    border: 1px solid #b98938;
+}
+
+
+.primary-btn span {
+    margin-left: 10px;
+
+    font-size: 16px;
+}
+
+
+.primary-btn:hover {
+    background: #d0a454;
+
+    border-color: #d0a454;
+}
+
+
+.secondary-btn {
+    background: transparent;
+
+    color: #f4f2ed;
+
+    border: 1px solid #777;
+}
+
+
+.secondary-btn:hover {
+    border-color: #b98938;
+
+    color: #b98938;
+}
+
+
+/* ---------- HERO IMAGE ---------- */
+
+.hero-image {
+    width: 590px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-image img {
+    width: 100%;
+    max-width: 570px;
+
+    height: 580px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border: 1px solid #a47736;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+
+.edition {
+    position: absolute;
+    top: 15px;
+    left: -5%;
+    background: #a47736;
+    color: white;
+    padding: 7px 12px;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CATALOG SECTION
+========================================================= */
+
+.catalog {
+    padding: 75px 9%;
+
+    background: #f4f2ed;
+}
+
+
+.catalog h2 {
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+    font-weight: normal;
+
+    margin-bottom: 30px;
+
+    color: #071522;
+}
+
+
+.catalog-box {
+    background: white;
+
+    border: 1px solid #dedbd4;
+
+    padding: 25px;
+}
+
+
+/* ---------- SEARCH ---------- */
+
+.search-box {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    border-bottom: 1px solid #cfcac0;
+
+    padding-bottom: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.search-box span {
+    font-size: 25px;
+
+    color: #a47736;
+
+    margin-right: 12px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+
+    color: #071522;
+}
+
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+
+/* ---------- CATALOG OPTIONS ---------- */
+
+.catalog-options {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.categories {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.categories a {
+    display: block;
+}
+
+
+.categories button {
+    background: transparent;
+
+    border: 1px solid #c8c4bb;
+
+    padding: 11px 22px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    color: #071522;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.categories button:hover {
+    background: #071522;
+
+    color: #f4f2ed;
+
+    border-color: #071522;
+}
+
+
+/* ---------- ACTIVE CATEGORY ---------- */
+
+.categories button.active-category {
+    background: #071522;
+
+    color: #f4f2ed;
+
+    border-color: #071522;
+}
+
+
+/* ---------- ADVANCED SEARCH ---------- */
+
+.advanced-search {
+    background: transparent;
+
+    border: none;
+
+    color: #a47736;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.advanced-search:hover {
+    color: #071522;
+}
+
+
+/* ---------- ADVANCED MESSAGE ---------- */
+
+.advanced-message {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-top: 1px solid #dedbd4;
+
+    color: #777;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   COLLECTIONS SECTION
+========================================================= */
+
+.collections {
+    padding: 80px 9%;
+
+    background: #f4f2ed;
+}
+
+
+/* ---------- SECTION HEADING ---------- */
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+
+    margin-bottom: 40px;
+}
+
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+
+    font-weight: normal;
+
+    color: #071522;
+
+    margin-top: 5px;
+}
+
+
+.section-heading>a {
+    color: #a47736;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+
+.section-heading>a:hover {
+    color: #071522;
+}
+
+
+/* =========================================================
+   BOOKS GRID
+========================================================= */
+
+.books-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================================================
+   BOOK CARD
+========================================================= */
+
+.book-card {
+    background: #ffffff;
+
+    border: 1px solid #dedbd4;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+
+.book-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 15px 35px rgba(7, 21, 34, 0.12);
+}
+
+
+/* =========================================================
+   BOOK COVER
+========================================================= */
+
+.book-cover {
+    width: 100%;
+
+    height: 390px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #071522;
+}
+
+
+.book-cover img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s ease;
+}
+
+
+.book-card:hover .book-cover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   COVER LINES
+========================================================= */
+
+.cover-lines {
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+
+    bottom: 20px;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+
+.cover-lines span {
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   BOOK INFO
+========================================================= */
+
+.book-info {
+    padding: 24px;
+}
+
+
+.book-info h3 {
+    font-family: Georgia, serif;
+
+    font-size: 22px;
+
+    font-weight: normal;
+
+    line-height: 1.3;
+
+    color: #071522;
+
+    margin-bottom: 10px;
+}
+
+
+.book-info>p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   META
+========================================================= */
+
+.meta {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.meta>span:first-child {
+    color: #888;
+
+    font-size: 11px;
+
+    letter-spacing: 0.5px;
+}
+
+
+.tag {
+    border: 1px solid #cfcac0;
+
+    padding: 5px 8px;
+
+    color: #a47736;
+
+    font-size: 9px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   LOAD MORE
+========================================================= */
+
+.load-more-container {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 45px;
+}
+
+
+.load-more-btn {
+    background: #071522;
+
+    color: #f4f2ed;
+
+    border: 1px solid #071522;
+
+    padding: 14px 28px;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+
+.load-more-btn:hover {
+    background: #b98938;
+
+    border-color: #b98938;
+
+    color: #071522;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        padding: 70px 6%;
+
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-image {
+        width: 330px;
+    }
+
+    .hero-image img {
+        height: 420px;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 60px 6%;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 300px;
+    }
+
+    .hero-image img {
+        height: 390px;
+    }
+
+    .catalog,
+    .collections {
+        padding: 60px 6%;
+    }
+
+    .catalog-options {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .section-heading {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .hero-buttons a,
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .categories {
+        flex-wrap: wrap;
+    }
+
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-cover {
+        height: 420px;
+    }
+
+    .catalog h2,
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+}
