@@ -9,4 +9,13 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./collections.css']
 })
 export class CollectionsComponent {
+  showFilter = false;
+  selectedCategory = 'All';
+  toggleFilter() {
+    this.showFilter = !this.showFilter;
+  }
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+    this.showFilter = false;
+  }
 }

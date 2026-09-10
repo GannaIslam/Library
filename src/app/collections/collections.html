@@ -1,18 +1,13 @@
 <div class="library-page">
 
-<!-- Header -->
 <section class="page-header">
-
     <div class="header-content">
-
     <span class="eyebrow">
         CURATED ARCHIVES
     </span>
-
     <h1>
         Library Collections
     </h1>
-
     <p>
         Journey through the meticulously curated wings of Aethelgard.
         From the ancient codices sealed within the Rare Vault to the
@@ -20,142 +15,136 @@
         collection offers a unique passage into our shared history
         and boundless imagination.
     </p>
-
     </div>
 
+    <div class="filter-wrapper">
+    <button class="filter-button" (click)="toggleFilter()">
+        <span class="filter-icon">☰</span>
+        {{ selectedCategory }}
+    </button>
+    @if (showFilter) {
+        <div class="filter-menu">
+        <button (click)="selectCategory('All')">
+            All
+        </button>
+        <button (click)="selectCategory('Ancient')">
+            Ancient
+        </button>
+        <button (click)="selectCategory('Medieval')">
+            Medieval
+        </button>
+        </div>
+    }
+    </div>
 </section>
-
-
 <div class="divider"></div>
-
 <section class="collections-grid">
 
+    @if (selectedCategory === 'All' || selectedCategory === 'Ancient') {
     <article class="collection-card rare-vault">
 
-    <img
-    src="/images/image 1.jpeg"
-    alt="The Rare Vault"
-    >
-
-    <div class="card-overlay"></div>
-
-    <div class="card-content">
-
+        <img
+        src="/images/image 1.jpeg"
+        alt="The Rare Vault"
+        >
+        <div class="card-overlay"></div>
+        <div class="card-content">
         <span class="card-label gold">
-        RESTRICTED ACCESS
+            RESTRICTED ACCESS
         </span>
-
         <h2>
-        The Rare Vault
+            The Rare Vault
         </h2>
-
         <p>
-        First editions, fragile manuscripts, and texts dating back
-        to the Founding Era. Access requires prior authorization
-        from the Guild of
+            First editions, fragile manuscripts, and texts dating back
+            to the Founding Era. Access requires prior authorization
+            from the Guild of
         </p>
+        </div>
 
-    </div>
-
-    <button
-    class="arrow-button"
-    routerLink="/stacks"
->
-    →
-</button>
-
+        <button class="arrow-button">
+        →
+        </button>
     </article>
-
+    }
+    @if (selectedCategory === 'All' || selectedCategory === 'Medieval') {
 
     <article class="collection-card forgotten-lore">
 
-    <img
+        <img
         src="images/image 2.jpeg"
         alt="Forgotten Lore"
-    >
-
-    <div class="card-overlay"></div>
-
-    <div class="card-content">
+        >
+        <div class="card-overlay"></div>
+        <div class="card-content">
 
         <span class="card-label">
-        MYTH &amp; LEGEND
+            MYTH &amp; LEGEND
         </span>
 
         <h2>
-        Forgotten Lore
+            Forgotten Lore
         </h2>
 
         <p>
-        Myths, legends, and apocryphal texts gathered from
-        the outer realms.
+            Myths, legends, and apocryphal texts gathered from
+            the outer realms.
         </p>
-
-    </div>
-
+        </div>
     </article>
 
+    }
+    @if (selectedCategory === 'All' || selectedCategory === 'Modern') {
 
     <article class="collection-card modern-manuscripts">
 
-    <img
+        <img
         src="images/image 3.jpeg"
         alt="Modern Manuscripts"
-    >
+        >
+        <div class="card-overlay"></div>
 
-    <div class="card-overlay"></div>
-
-    <div class="card-content">
+        <div class="card-content">
 
         <span class="card-label">
-        CONTEMPORARY
+            CONTEMPORARY
         </span>
-
         <h2>
-        Modern Manuscripts
+            Modern Manuscripts
         </h2>
-
         <p>
-        The evolving thoughts of today's leading scholars,
-        essayists, and novelists.
+            The evolving thoughts of today's leading scholars,
+            essayists, and novelists.
         </p>
-
-    </div>
-
+        </div>
     </article>
-
-
+    }
+    @if (selectedCategory === 'All' || selectedCategory === 'Contemporary') {
     <article class="collection-card children-fables">
 
-    <img
+        <img
         src="images/image 4.jpeg"
         alt="Children's Fables"
-    >
-
-    <div class="card-overlay"></div>
-
-    <div class="card-content">
-
+        >
+        <div class="card-overlay"></div>
+        <div class="card-content">
         <span class="card-label gold">
-        YOUTH WING
+            YOUTH WING
+        </span>
+        <h2>
+            Children's Fables
+        </h2>
+        <p>
+            Where journeys begin. Illustrated volumes, morality tales,
+            and the fundamental myths that shape young minds.
+        </p>
+        </div>
+        <span class="sparkle">
+        ✦
         </span>
 
-        <h2>
-        Children's Fables
-        </h2>
-
-        <p>
-        Where journeys begin. Illustrated volumes, morality tales,
-        and the fundamental myths that shape young minds.
-        </p>
-
-    </div>
-
-    <span class="sparkle">
-        ✦
-    </span>
-
     </article>
+    }
 
 </section>
 
